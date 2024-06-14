@@ -1,0 +1,366 @@
+
+
+{"tag":  "database", 
+    "patterns": [ "what is database", "define database"],
+    "responses": ["A DBMS is a collection of interrelated data and a set of programs to access those data." ]
+},
+
+{"tag":"need dbms",
+     "patterns":["why do we need dbms"," what is the need for dbms","what is the need for database management system"],
+     "responses":[" We need DBMS to - 1. To Manage large amount of information
+     2. To Provide safety of information stored.
+     3. To Prevent unauthorized access.
+     4. To Consistency(when DB is shared)"]
+},
+
+{"tag":"dbms application",
+     "patterns":["what are the applications of dbms","list the applications of database management system"],
+     "responses":["The applications of DBMS are - 1.Banking - For customer information, accounts, and
+     loans, and banking transactions.
+     2. Airlines - For reservation and schedule information,
+     flight details etc.
+     3. Universities - For student and faculty information,
+     course registrations, and grades"]
+},
+
+{"tag":" file system",
+     "patterns":["what is file system","explain file system"],
+     "responses":["Before the evolution of DBMS, File Systems are used to
+     store and manage the data.
+     1. In File System data will be stored in individual files.
+     2. A File is a collection of data.
+     3. Files are typically designed to meet needs of a particular
+     department or user group."]
+},
+
+
+{"tag":"atomicity",
+     "patterns":["what is atomicity", "define atomicity", "explain atomicity"],
+     "responses":["Atomicity problems:
+     * Atomicity is a property of a transaction it states
+     that either all actions to be performed or none.
+     * In file processing system incomplete transactions
+     cannot be roll back.
+     * Due to this data will be inconsistent."]
+},
+
+{"tag":"concurreny control",
+     "patterns":["what is concurrency control","define concurrency control"],
+     "responses":["DBMS will support concurrency control tools for 
+     permitting multiple users or application programs 
+     to access the database concurrently, while 
+     preserving the consistency of database"]
+},
+
+{"tag":"data consistency",
+     "patterns":["what is data consistency","data consistency"],
+     "responses":["By controlling the data redundancy, the data
+     consistency is obtained.
+     1. If a data item appears only once, any update to its
+     value has to be performed only once and the
+     updated value (new value of item) is immediately
+     available to all users.
+     2. If the DBMS has reduced redundancy to a minimum
+     level, the database system enforces consistency."]
+},
+
+{"tag":"data redundancy",
+     "patterns":["what is data redundancy","data redundancy"],
+     "responses":["In non-database systems (File system) same data is
+     stored in many places.
+     1. Redundancy leads to several problems 1.duplication
+     effort: same data can be entered multiple times 2.
+     Storage space is wasted. 3. Data inconsistency.
+     2. In DBMS, all the data is stored in one place.
+     3. In DBMS, all the data of an organization is
+     integrated into a single database.
+     4. By controlling the data redundancy, you can save
+     storage space"]
+},
+
+{"tag":"data security",
+     "patterns":["what is data security", "explain data security"],
+     "responses":["Data security is the protection of the database from
+     unauthorized users.
+     1. Only the authorized persons are allowed to access
+     the database.
+     2. Some of the users may be allowed to access only a
+     part of database i.e., the data that is related to them
+     or related to their department.
+     3. Mostly, the DBA can access all the data in the
+     database.
+     4. Some users may be permitted only to retrieve data, whereas
+     others are allowed to retrieve as well as to update data.
+     5. The database access is controlled by the DBA.
+     6. DBA creates the accounts of users and gives rights to access
+     the database.
+     7. Typically, users or group of users are given usernames
+     protected by passwords.
+     8. Most of the DBMSs provide the security sub-system, which
+     the DBA uses to create accounts of users and to specify
+     account restrictions."]
+},
+
+{"tag":"integrity constraints",
+     "patterns":["define integrity constraints","what are integrity constraints","explain integrity constraints"],
+     "responses": ["Integrity constraints can be applied to database so that
+     correct data can be entered in to database.
+     Ex: 1. minimum balance of a account is 1000
+     2. Max marks of a subject is 100
+     * Most database applications have certain integrity constraints
+     that must hold for the data.
+     * A DBMS should provide capabilities for defining and
+     enforcing these constraints.
+     * The simplest type of integrity constraint involves specifying
+     a data type for each data item."]
+},
+
+{"tag":"view of data",
+     "patterns":["what is a view of data","explain view of data"],
+     "responses":["View updates
+     A major purpose of the database system is to 
+    provide users with an abstract view of the 
+    data.
+    * Abstract View: The system hides certain 
+    details of how the data are stored and 
+    maintained."]
+},
+
+{"tag":"data abstraction",
+     "patterns":["what is data abstraction","explain about data abstraction"],
+     "responses":["Developers hide the complexity from users 
+     through several levels of abstraction to 
+     simplify user's interaction with the system."]
+},
+
+{"tag":"levels of data abstraction",
+     "patterns":["what are different levels of data abstraction","explain about different levels of data abstraction"],
+     "responses":["Three levels of Abstraction:
+     1. Physical Level
+     2. Logical Level
+     3. View Level"]
+},
+
+{"tag":"data models",
+     "patterns":["explain about different data models","what are the different types of data models","explain different levels of database models","what are different database models"],
+     "responses":["1. Linear regression requires that the dependent variable is a continuous numerical variable
+                   2. Linear Regression is limited to Linear Relationships between the dependent variable and 
+                      the independent variables. In the real world, the data is rarely linearly separable. It
+                      assumes that there is a straight-line relationship between the dependent and independent 
+                      variables which is incorrect many times.
+                   3. Non-linear data cannot be well fitted. So you need to first determine whether the 
+                      variables are linear.
+     "]
+},
+{"tag":"domain relational calculus",
+  "patterns":["what is domain relational calculus", "explain domain relational calculus"],
+  "responses":["Domain relational calculus is a type of query language used in database management systems (DBMS) to retrieve data from relational databases. It is a non-procedural query language that is based on mathematical predicate calculus.
+
+  In domain relational calculus, queries are expressed as formulas that define the desired output in terms of a set of variables and a predicate that describes the conditions that must be satisfied by the variables. The variables represent the tuples in the relation, and the predicate specifies the constraints that must be met in order for a tuple to be included in the result set.
+  
+  The language is based on two types of variables: range variables, which range over the domain of the relation, and bound variables, which are introduced by quantifiers and range over a specified domain. There are two types of quantifiers in domain relational calculus: existential quantifiers and universal quantifiers.
+  Existential quantifiers are used to express the existence of a tuple that satisfies a given predicate. For example, a query in domain relational calculus might use an existential quantifier to find all customers who have placed an order foreries a particular product.
+  Universal quantifiers are used to express the fact that all tuples in a relation satisfy a given predicate. For example, a query in domain relational calculus might use a universal quantifier to find all customers who have placed an order for every product in a certain category.
+  
+  "],
+},
+{"tag":"semantics of tcs queries",
+  "patterns":["what are semantics of tcs queries", "explain semantics of tcs queries", "explain types of semantics of tcs queries"],
+  "responses":["In database management systems (DBMS), semantics refer to the meaning of data and the relationships between data elements in a database. It includes the rules and constraints that govern the way data can be stored, accessed, and manipulated within a database.
+
+  There are different types of semantics in DBMS, including:
+  
+  Data semantics: This refers to the meaning of the data itself, such as the type of data (e.g., integer, string, date) and the relationships between data elements (e.g., foreign keys, primary keys, constraints).
+  
+  Query semantics: This refers to the meaning of a database query, including the logical relationships between tables and the conditions that must be met for a query to return the desired results.
+  
+  Transaction semantics: This refers to the meaning and behavior of database transactions, including the consistency, isolation, durability, and atomicity properties of transactions.
+  
+  Security semantics: This refers to the access control policies and mechanisms used to ensure that users can only access and manipulate data for which they have authorization."],
+},
+{"tag":"relational calculus",
+"patterns":["explain types of relational calculus","what are the types of relational calculus","explain relational calculus","what is relational calculus"],
+"responses":["In database management systems (DBMS), relational calculus is a non-procedural query language that is used to query and manipulate data stored in a relational database. Relational calculus is based on mathematical logic and uses a declarative syntax to express queries.
+
+There are two types of relational calculus:
+
+Tuple relational calculus: This type of calculus is used to retrieve data from a relational database based on a set of conditions or constraints. The calculus specifies what data should be retrieved from the database rather than how the data should be retrieved. The output of a tuple relational calculus query is a set of tuples that satisfy the specified conditions.
+
+Domain relational calculus: This type of calculus is similar to tuple relational calculus, but it is used to retrieve data based on a set of variables and predicates. The variables represent the tuples in the relation, and the predicates specify the conditions that must be satisfied by the variables. The output of a domain relational calculus query is a set of variables that satisfy the specified conditions
+"],
+},
+{"tag":"joins",
+"patterns":["explain types of joins","what are different types of joins","what are the different types of joins","explain joins","what are joins",],
+"responses":["In database management systems (DBMS), joins are used to combine data from two or more tables based on a related column or key. Joins are used to retrieve data that is spread across multiple tables and cannot be easily retrieved using a single table query.
+There are several types of joins that can be used in DBMS, including:
+*Inner join: This type of join returns only the rows from both tables that have matching values in the related column or key
+*Left outer join: This type of join returns all rows from the left table and the matching rows from the right table. If there are no matching rows in the right table, null values are returned for those columns.
+*Right outer join: This type of join is similar to the left outer join but returns all rows from the right table and the matching rows from the left table. If there are no matching rows in the left table, null values are returned for those columns.
+*Full outer join: This type of join returns all rows from both tables, along with the matching rows from each table. If there are no matching rows in either table, null values are returned for those columns.
+*Cross join: This type of join returns the Cartesian product of both tables, which means that every row from one table is combined with every row from the other table
+"],
+},
+{"tag":"relational algerba",
+"patterns":["explain relational algerba","what is relational algerba",],
+"responses":["Relational algebra is a procedural query language that uses a set of operators to manipulate and combine data from one or more tables in a database. The basic operators in relational algebra include:
+Selection: This operator selects rows from a table that satisfy a specified condition or set of conditions.
+Projection: This operator selects a subset of columns from a table.
+Union: This operator combines two tables into a single table that includes all the rows from both tables.
+Intersection: This operator returns only the rows that are common to both tables.
+Difference: This operator returns only the rows that are unique to one of the two tables.
+Join: This operator combines two tables based on a common attribute or column.
+"],
+},
+{"tag":"data independence",
+"patterns":["explain data independence","what is data independence","explain what is data independence"],
+"responses":["Data independence and security views are two important concepts in database management systems (DBMS) that help ensure the security and integrity of data stored in a database.
+Data independence refers to the ability of a database to store and manipulate data without being affected by changes to the way the data is stored or accessed. In other words, data independence allows for changes to be made to the database schema without affecting the applications that use the database. There are two types of data independence:
+"],
+},
+{"tag":"types of data independence",
+"patterns":["explain types of data independence","what are the types of data independence","explain what are types of data independence"],
+"responses":["Physical data independence: This refers to the ability to change the physical storage structure of the database without affecting the way that data is accessed by applications. For example, the database administrator could change the storage system from hard disk to solid-state drives, but the applications would not be affected.
+Logical data independence: This refers to the ability to change the logical structure of the database (e.g. adding or deleting tables, changing relationships between tables) without affecting the way that data is accessed by applications.
+"],
+},
+{"tag":"translating relationshipsets",
+"patterns":["explain translating relationshipsets","what are translating relationshipsets","what is translating relationshipsets"],
+"responses":["Translating relationship sets with participation constraints in database management systems (DBMS) involves defining constraints on the relationships between entities in a database. Participation constraints specify the minimum and maximum number of entities that must participate in a relationship set.
+"],
+},
+{"tag":"transactions",
+"patterns":["what are transactions","explain transactions","what is a transaction","explain transaction"],
+"responses":["Transactions: A transaction is a set of operations that are treated as a single, indivisible unit of work in a database. Transactions are used to ensure the consistency and integrity of data by grouping multiple database operations into a single atomic unit. Transactions can be committed to make their changes permanent or rolled back to undo all of the changes made by the transaction.
+"],
+},
+{"tag":"constraints",
+"patterns":["what are constraints","explain constraints"],
+"responses":["Constraints: Constraints are rules that are enforced by the DBMS to ensure that data in a database meets certain requirements or conditions. Constraints are used to maintain data integrity and consistency by preventing invalid or inconsistent data from being entered into the database. Some common types of constraints include:
+"],
+}
+
+
+{"tag":"data abstraction",
+     "patterns":["what is data abstraction","explain about data abstraction"],
+     "responses":["Developers hide the complexity from users 
+     through several levels of abstraction to 
+     simplify user's interaction with the system."]
+},
+
+{"tag":"levels of data abstraction",
+     "patterns":["what are different levels of data abstraction","explain about different levels of data abstraction"],
+     "responses":["Three levels of Abstraction:
+     1. Physical Level
+     2. Logical Level
+     3. View Level"]
+},
+
+{"tag":"data models",
+     "patterns":["explain about different data models","what are the different types of data models","explain different levels of database models","what are different database models"],
+     "responses":["1. Linear regression requires that the dependent variable is a continuous numerical variable
+                   2. Linear Regression is limited to Linear Relationships between the dependent variable and 
+                      the independent variables. In the real world, the data is rarely linearly separable. It
+                      assumes that there is a straight-line relationship between the dependent and independent 
+                      variables which is incorrect many times.
+                   3. Non-linear data cannot be well fitted. So you need to first determine whether the 
+                      variables are linear.
+     "]
+},
+{"tag":"domain relational calculus",
+  "patterns":["what is domain relational calculus", "explain domain relational calculus"],
+  "responses":["Domain relational calculus is a type of query language used in database management systems (DBMS) to retrieve data from relational databases. It is a non-procedural query language that is based on mathematical predicate calculus.
+
+  In domain relational calculus, queries are expressed as formulas that define the desired output in terms of a set of variables and a predicate that describes the conditions that must be satisfied by the variables. The variables represent the tuples in the relation, and the predicate specifies the constraints that must be met in order for a tuple to be included in the result set.
+  
+  The language is based on two types of variables: range variables, which range over the domain of the relation, and bound variables, which are introduced by quantifiers and range over a specified domain. There are two types of quantifiers in domain relational calculus: existential quantifiers and universal quantifiers.
+  Existential quantifiers are used to express the existence of a tuple that satisfies a given predicate. For example, a query in domain relational calculus might use an existential quantifier to find all customers who have placed an order foreries a particular product.
+  Universal quantifiers are used to express the fact that all tuples in a relation satisfy a given predicate. For example, a query in domain relational calculus might use a universal quantifier to find all customers who have placed an order for every product in a certain category.
+  
+  "],
+},
+{"tag":"semantics of tcs queries",
+  "patterns":["what are semantics of tcs queries", "explain semantics of tcs queries", "explain types of semantics of tcs queries"],
+  "responses":["In database management systems (DBMS), semantics refer to the meaning of data and the relationships between data elements in a database. It includes the rules and constraints that govern the way data can be stored, accessed, and manipulated within a database.
+
+  There are different types of semantics in DBMS, including:
+  
+  Data semantics: This refers to the meaning of the data itself, such as the type of data (e.g., integer, string, date) and the relationships between data elements (e.g., foreign keys, primary keys, constraints).
+  
+  Query semantics: This refers to the meaning of a database query, including the logical relationships between tables and the conditions that must be met for a query to return the desired results.
+  
+  Transaction semantics: This refers to the meaning and behavior of database transactions, including the consistency, isolation, durability, and atomicity properties of transactions.
+  
+  Security semantics: This refers to the access control policies and mechanisms used to ensure that users can only access and manipulate data for which they have authorization."],
+},
+{"tag":"relational calculus",
+"patterns":["explain types of relational calculus","what are the types of relational calculus","explain relational calculus","what is relational calculus"],
+"responses":["In database management systems (DBMS), relational calculus is a non-procedural query language that is used to query and manipulate data stored in a relational database. Relational calculus is based on mathematical logic and uses a declarative syntax to express queries.
+
+There are two types of relational calculus:
+
+Tuple relational calculus: This type of calculus is used to retrieve data from a relational database based on a set of conditions or constraints. The calculus specifies what data should be retrieved from the database rather than how the data should be retrieved. The output of a tuple relational calculus query is a set of tuples that satisfy the specified conditions.
+
+Domain relational calculus: This type of calculus is similar to tuple relational calculus, but it is used to retrieve data based on a set of variables and predicates. The variables represent the tuples in the relation, and the predicates specify the conditions that must be satisfied by the variables. The output of a domain relational calculus query is a set of variables that satisfy the specified conditions
+"],
+},
+{"tag":"joins",
+"patterns":["explain types of joins","what are different types of joins","what are the different types of joins","explain joins","what are joins",],
+"responses":["In database management systems (DBMS), joins are used to combine data from two or more tables based on a related column or key. Joins are used to retrieve data that is spread across multiple tables and cannot be easily retrieved using a single table query.
+There are several types of joins that can be used in DBMS, including:
+*Inner join: This type of join returns only the rows from both tables that have matching values in the related column or key
+*Left outer join: This type of join returns all rows from the left table and the matching rows from the right table. If there are no matching rows in the right table, null values are returned for those columns.
+*Right outer join: This type of join is similar to the left outer join but returns all rows from the right table and the matching rows from the left table. If there are no matching rows in the left table, null values are returned for those columns.
+*Full outer join: This type of join returns all rows from both tables, along with the matching rows from each table. If there are no matching rows in either table, null values are returned for those columns.
+*Cross join: This type of join returns the Cartesian product of both tables, which means that every row from one table is combined with every row from the other table
+"],
+},
+
+{"tag":"levels of data abstraction",
+     "patterns":["what are different levels of data abstraction","explain about different levels of data abstraction"],
+     "responses":["Three levels of Abstraction:
+     1. Physical Level
+     2. Logical Level
+     3. View Level"]
+},
+
+{"tag":"data models",
+     "patterns":["explain about different data models","what are the different types of data models","explain different levels of database models","what are different database models"],
+     "responses":["1. Linear regression requires that the dependent variable is a continuous numerical variable
+                   2. Linear Regression is limited to Linear Relationships between the dependent variable and 
+                      the independent variables. In the real world, the data is rarely linearly separable. It
+                      assumes that there is a straight-line relationship between the dependent and independent 
+                      variables which is incorrect many times.
+                   3. Non-linear data cannot be well fitted. So you need to first determine whether the 
+                      variables are linear.
+     "]
+},
+{"tag":"domain relational calculus",
+  "patterns":["what is domain relational calculus", "explain domain relational calculus"],
+  "responses":["Domain relational calculus is a type of query language used in database management systems (DBMS) to retrieve data from relational databases. It is a non-procedural query language that is based on mathematical predicate calculus.
+
+  In domain relational calculus, queries are expressed as formulas that define the desired output in terms of a set of variables and a predicate that describes the conditions that must be satisfied by the variables. The variables represent the tuples in the relation, and the predicate specifies the constraints that must be met in order for a tuple to be included in the result set.
+  
+  The language is based on two types of variables: range variables, which range over the domain of the relation, and bound variables, which are introduced by quantifiers and range over a specified domain. There are two types of quantifiers in domain relational calculus: existential quantifiers and universal quantifiers.
+  Existential quantifiers are used to express the existence of a tuple that satisfies a given predicate. For example, a query in domain relational calculus might use an existential quantifier to find all customers who have placed an order foreries a particular product.
+  Universal quantifiers are used to express the fact that all tuples in a relation satisfy a given predicate. For example, a query in domain relational calculus might use a universal quantifier to find all customers who have placed an order for every product in a certain category.
+  
+  "],
+},
+{"tag":"semantics of tcs queries",
+  "patterns":["what are semantics of tcs queries", "explain semantics of tcs queries", "explain types of semantics of tcs queries"],
+  "responses":["In database management systems (DBMS), semantics refer to the meaning of data and the relationships between data elements in a database. It includes the rules and constraints that govern the way data can be stored, accessed, and manipulated within a database.
+
+  There are different types of semantics in DBMS, including:
+  
+  Data semantics: This refers to the meaning of the data itself, such as the type of data (e.g., integer, string, date) and the relationships between data elements (e.g., foreign keys, primary keys, constraints).
+  
+  Query semantics: This refers to the meaning of a database query, including the logical relationships between tables and the conditions that must be met for a query to return the desired results.
+  
+  Transaction semantics: This refers to the meaning and behavior of database transactions, including the consistency, isolation, durability, and atomicity properties of transactions.
+  
+  Security semantics: This refers to the access control policies and mechanisms used to ensure that users can only access and manipulate data for which they have authorization."],
+},
+
+
+
+
